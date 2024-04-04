@@ -23,18 +23,19 @@
     "url": "git+https://github.com/royaltm/node-murmurhash-native.git"
   },
   "scripts": {
-    "install": "node-pre-gyp install --fallback-to-build",
+    "install_old": "node-pre-gyp install --fallback-to-build",
+    "install": "node-gyp rebuild",
     "test": "tap -C -Rclassic ./test/test*.js ./test/types/test*.js",
     "test-ts": "tap -C -Rclassic ./test/types/test*.js",
     "test-gc": "tap -Rspec --node-arg=--expose-gc ./test/persistent/test.gc.*.js",
     "bench": "sh bench/bench.all.sh",
-    "rebuild": "node-pre-gyp rebuild",
+    "rebuild": "node-gyp rebuild",
     "tsc": "tsc -p test/types",
     "typedoc": "typedoc --tsconfig test/types/tsconfig.json index.d.ts promisify.d.ts incremental.d.ts stream.d.ts"
   },
   "binary": {
     "module_name": "murmurhash",
-    "module_path": "./lib/{configuration}/",
+    "module_path": "./lib/Release/",
     "host": "https://github.com/royaltm/node-murmurhash-native/releases/download/",
     "remote_path": "v{version}"
   },
@@ -45,7 +46,6 @@
     "node": ">=6"
   },
   "dependencies": {
-    "@mapbox/node-pre-gyp": "^1.0.11",
     "nan": "^2.14.1"
   },
   "devDependencies": {
@@ -54,7 +54,7 @@
     "bluebird": "^3.7.2",
     "commander": "^5.0.0",
     "murmurhash3js": "^3.0.1",
-    "node-pre-gyp-github": "^1.4.4",
+    "node-gyp": "^10.1.0",
     "tap": "^14.10.7",
     "typedoc": "^0.17.4",
     "typedoc-plugin-external-module-name": "^3.0.0",

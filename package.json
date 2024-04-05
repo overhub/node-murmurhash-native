@@ -46,7 +46,7 @@
     "node": ">=6"
   },
   "dependencies": {
-    "nan": "^2.14.1"
+    "nan": "^2.19.0"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.30",

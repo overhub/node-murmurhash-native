@@ -15,15 +15,14 @@
   ],
   "version": "3.5.0",
   "license": "MIT",
-  "author": "Rafał Michalski <royal@yeondir.com>",
+  "author": "Overhub <buck@overhub.com>",
   "contributors": [],
-  "homepage": "http://github.com/royaltm/node-murmurhash-native",
+  "homepage": "http://github.com/overhub/node-murmurhash-native",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/royaltm/node-murmurhash-native.git"
+    "url": "git+https://github.com/overhub/node-murmurhash-native.git"
   },
   "scripts": {
-    "install_old": "node-pre-gyp install --fallback-to-build",
     "install": "node-gyp rebuild",
     "test": "tap -C -Rclassic ./test/test*.js ./test/types/test*.js",
     "test-ts": "tap -C -Rclassic ./test/types/test*.js",
@@ -43,7 +42,7 @@
   "types": "index.d.ts",
   "typeScriptVersion": "2.0",
   "engines": {
-    "node": ">=6"
+    "node": ">=18"
   },
   "dependencies": {
     "nan": "^2.19.0"

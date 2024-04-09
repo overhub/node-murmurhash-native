@@ -38,7 +38,8 @@
     "host": "https://github.com/royaltm/node-murmurhash-native/releases/download/",
     "remote_path": "v{version}"
   },
-  "main": "index.js",
+  "main.old": "index.js",
+  "main": "lib/Release/murmurhash.node",
   "types": "index.d.ts",
   "typeScriptVersion": "2.0",
   "engines": {

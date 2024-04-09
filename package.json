@@ -45,7 +45,8 @@
     "node": ">=18"
   },
   "dependencies": {
-    "nan": "^2.19.0"
+    "nan": "^2.19.0",
+    "node-gyp-build": "^4.8.0"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.30",

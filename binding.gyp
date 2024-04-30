@@ -80,7 +80,7 @@
             "<(PRODUCT_DIR)/murmurhash.node",
             "<(PRODUCT_DIR)/murmurhashincremental.node"
           ],
-          "destination": "<(module_path)"
+          "destination": "./lib/Release"
         }
       ]
     }
